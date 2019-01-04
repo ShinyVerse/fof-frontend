@@ -1,0 +1,27 @@
+
+[
+  {
+    "name": "Public Speaking",
+    "challenges": [
+      "Get comfortable speaking aloud. Read one article out loud one a day.",
+      "Read something you've enjoyed to friends/family.",
+      "Attend a meetup based around public speaking. Deliver a talk to a group of friendly strangers."
+    ]
+  },
+  {
+    "name": "Open Water",
+    "challenges": [
+      "Get swimming. If you can't, take lessons. Otherwise get stronger in a pool.",
+      "Go into the sea.",
+      "Go diving."
+    ]
+  },
+  {
+    "name": "Socializing",
+    "challenges": [
+      "Read passages from 'Feel the Fear and Do It Anyway' that jump out to you.",
+      "When you buy something from a shop, make light conversation with the cashier.",
+      "Attend a meetup. Board game meetups are very friendly and easy-going."
+    ]
+  }
+]
