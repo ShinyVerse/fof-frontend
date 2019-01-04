@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BadgeList from './components/BadgeList/BadgeList'
+import BadgeList from './components/BadgeList/BadgeList';
 import BadgeJson from './assets/badge.json';
 //svgs
 import seaSvg from './assets/svg/sea.svg';
@@ -19,7 +19,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <BadgeList badges={this.state.badges} badgeInfo={BadgeJson}/>
-
         </header>
       </div>
     );
