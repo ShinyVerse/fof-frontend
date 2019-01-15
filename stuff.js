@@ -44,7 +44,7 @@ class App extends Component {
 
 export default App;
 
-
+import challengeJson from './assets/challenges.json';
 
 
 /* ,
