@@ -1,0 +1,13 @@
+
+[
+  {
+    "name": "Open Water",
+    "challenges": [
+      {
+         "id": "1a",
+         "challenge":"Get swimming. If you can't, take lessons. Otherwise grow confidence in a pool.",
+         "success": false
+      }
+    ]
+  }
+]
