@@ -7,6 +7,11 @@
          "id": "1a",
          "challenge":"Get swimming. If you can't, take lessons. Otherwise grow confidence in a pool.",
          "success": false
+      },
+      {
+         "id": "1b",
+         "challenge":"Get diving.",
+         "success": false
       }
     ]
   }
