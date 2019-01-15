@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import challengeJson from './assets/challenges.json';
+
 import IndividualChallenge from './components/IndividualChallenge/IndividualChallenge';
-//svgs
+
 
 import './App.css';
 class App extends Component {
