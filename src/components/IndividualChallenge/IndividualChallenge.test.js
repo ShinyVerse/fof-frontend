@@ -7,7 +7,7 @@ import { findByTestAttr } from '../../../test/testUtils';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 
-const UNCHECKED_TASK = 'x';
+const UNCHECKED_TASK = 'X';
 const CHECKED_TASK = "✓";
 
 const defaultProps = {
@@ -44,18 +44,15 @@ describe('challenge', () => {
 describe('check button - unchecked', () => {
   let wrapper;
   let checkButton;
-  let taskStatus;
   beforeEach(() => {
     wrapper = setup();
     checkButton = findByTestAttr(wrapper, 'check-button');
-    taskStatus = findByTestAttr(wrapper, 'task-status');
   });
   describe('check button - unchecked', () => {
     test('renders a check button', () => {
       expect(checkButton.length).toBe(1);
     });
     test('check button initially renders as unchecked', () => {
-      expect(taskStatus.hasClass('uncompleted-task')).toEqual(true);
       expect(checkButton.text()).toContain(UNCHECKED_TASK);
     });
   });
@@ -68,7 +65,5 @@ test('check button appears as tick when success: true', () => {
          "success": true
       });
     const checkButton = findByTestAttr(wrapper, 'check-button');
-    const taskStatus = findByTestAttr(wrapper, 'task-status');
-    expect(taskStatus.hasClass('completed-task')).toEqual(true);
     expect(checkButton.text()).toContain(CHECKED_TASK);
 });

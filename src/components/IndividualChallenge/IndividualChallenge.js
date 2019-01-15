@@ -4,15 +4,18 @@ import React from 'react';
 
 const IndividualChallenge = (props) => {
   let taskStatus;
+  let completedTaskCSS;
   if (props.success) {
-    taskStatus = (<span data-test='task-status' className='completed-task'>&#10003;</span>)
+    completedTaskCSS = 'completed-task';
+    taskStatus = (<span data-test='task-status'>&#10003;</span>)
   } else {
-    taskStatus = (<span data-test='task-status' className='uncompleted-task'>'x'</span>)
+    completedTaskCSS = 'uncompleted-task';
+    taskStatus = (<span data-test='task-status'>X</span>)
   }
   return (
-    <div data-test='component-challenge'>
-      <p data-test='challenge-task'>{props.challenge}</p>
-      <button data-test='check-button'>{taskStatus}</button>
+    <div id={props.id} data-test='component-challenge' className='challenge-container-div'>
+      <p data-test='challenge-task' className='challenge-task'>{props.challenge}</p>
+      <button data-test='check-button' className={completedTaskCSS}>{taskStatus}</button>
     </div>
   )
 }

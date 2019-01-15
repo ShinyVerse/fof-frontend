@@ -77,3 +77,22 @@ li {
   margin-left: 6px;
   margin-top: 3px;
 }
+
+.challenge-container-div{
+  margin: auto;
+  max-width: 300px;
+  background: grey;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+}
+
+.uncompleted-task {
+  color: white;
+  background: red;
+}
+.completed-task {
+  color: white;
+  background: green;
+}

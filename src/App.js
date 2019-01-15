@@ -12,8 +12,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <IndividualChallenge challenge='Get swimming'
-          success={true} />
+        <IndividualChallenge
+          id='1a'
+          challenge='Get swimming'
+          success={false} />
       </div>
     );
   }
