@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-import IndividualChallenge from './components/IndividualChallenge/IndividualChallenge';
+import challengeJson from './assets/challenges.json';
+import BadgeChallenges from './components/BadgeChallenges/BadgeChallenges';
 
 
 import './App.css';
@@ -10,12 +10,13 @@ class App extends Component {
 
   }
   render() {
+    const challengesOfOneBadge = challengeJson[0]
+
     return (
       <div className="App">
-        <IndividualChallenge
-          id='1a'
-          challenge='Get swimming'
-          success={false} />
+        <BadgeChallenges
+          challenges={challengesOfOneBadge}
+           />
       </div>
     );
   }
