@@ -8,6 +8,18 @@ class BadgeChallenges extends Component {
     this.state = {...props.challenges}
   }
 
+  checkClicker = (badgeID) => {
+    var updatedChallenges = this.state.challenges.filter((challenge) =>
+    { if (challenge.id === badgeID) {
+      challenge.success = true
+      }
+      return challenge;
+    })
+    this.setState({
+      challenges: updatedChallenges
+    });
+  }
+
   render() {
     let contents;
     if (this.state.challenges === 0) {
@@ -20,8 +32,10 @@ class BadgeChallenges extends Component {
           <IndividualChallenge
             data-test='challenge-item'
             key={challenge.id}
+            id={challenge.id}
             challenge={challenge.challenge}
             success={challenge.success}
+            handleClick={this.checkClicker.bind(this)}
           />
         )
       ))
