@@ -26,7 +26,7 @@ class BadgeChallenges extends Component {
        if (challenge.success === true) {
          return challenge
        } else {
-         return {};
+         return null;
        }
     });
     if (numberOfSuccessfulChallenges.length === 3) {
