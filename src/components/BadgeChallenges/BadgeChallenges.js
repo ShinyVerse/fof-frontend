@@ -23,7 +23,11 @@ class BadgeChallenges extends Component {
 
   allCompleteChecker = () => {
     let numberOfSuccessfulChallenges = this.state.challenges.filter(challenge => {
-       if (challenge.success === true) { return challenge }
+       if (challenge.success === true) {
+         return challenge
+       } else {
+         return {};
+       }
     });
     if (numberOfSuccessfulChallenges.length === 3) {
       this.updateComplete();
