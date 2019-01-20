@@ -1,5 +1,5 @@
-button {
-  outline: none;
+button, button:focus {
+  outline: 0;
 }
 img {
   max-width: 100px;
@@ -81,18 +81,31 @@ li {
 .challenge-container-div{
   margin: auto;
   max-width: 300px;
-  background: grey;
+  background: #d6d3d5;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-end;
+  border-top: black solid 1px;
+  border-bottom: black solid 1px;
+  border-radius: 0 10px 10px 0
 }
 
-.uncompleted-task {
+.uncompleted-task{
+  border: none;
   color: white;
-  background: red;
+  background: #862525;
+  border-radius: 0 10px 10px 0
 }
 .completed-task {
   color: white;
-  background: green;
+  background: #61c339;
+  border-radius: 0 10px 10px 0
+}
+
+.all-complete * {
+  /* color: transparent; */
+  /* border: none; */
+  background-color: #61c339;
+  z-index: 12;
 }
