@@ -12,6 +12,11 @@
          "id": "1b",
          "challenge":"Get diving.",
          "success": false
+      },
+      {
+         "id": "1c",
+         "challenge":"Advanced Diving",
+         "success": false
       }
     ]
   }

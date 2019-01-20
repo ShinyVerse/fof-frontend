@@ -5,7 +5,7 @@ class BadgeChallenges extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {...props.challenges}
+    this.state = {...props.challenges, allComplete: false }
   }
 
   checkClicker = (badgeID) => {
@@ -18,6 +18,27 @@ class BadgeChallenges extends Component {
     this.setState({
       challenges: updatedChallenges
     });
+    this.allCompleteChecker();
+  }
+
+  allCompleteChecker = () => {
+    let numberOfSuccessfulChallenges = this.state.challenges.filter(challenge => {
+       if (challenge.success === true) { return challenge }
+    });
+    if (numberOfSuccessfulChallenges.length === 3) {
+      this.updateComplete();
+    }
+  }
+
+  updateComplete = () => {
+    this.setState({
+      allComplete: true
+    });
+    // this.state.allComplete = true;
+  }
+
+  componentDidMount() {
+    this.allCompleteChecker();
   }
 
   render() {
@@ -40,10 +61,13 @@ class BadgeChallenges extends Component {
         )
       ))
     }
+    let allComplete = this.state.allComplete ? 'all-complete' : ""
     return (
       <div data-test='component-challenges'>
-        <ul>
-          {contents}
+        <ul     className='badgeContainer'>
+          <div data-test='badge-overlay' className={allComplete}>
+            {contents}
+          </div>
         </ul>
       </div>
     );

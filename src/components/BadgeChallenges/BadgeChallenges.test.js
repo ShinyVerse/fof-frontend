@@ -11,12 +11,17 @@ const defaultState = {
   challenges: [
     {
        "id": "1a",
-       "challenge":"Get swimming.",
+       "challenge":"Task1",
        "success": false
     },
     {
        "id": "1b",
-       "challenge":"Get diving.",
+       "challenge":"Task2",
+       "success": false
+    },
+    {
+       "id": "1c",
+       "challenge":"Task3",
        "success": false
     }
   ]
@@ -37,3 +42,15 @@ test('renders expected amount of challenge nodes', () => {
   const challengeListItemsNode = findByTestAttr(wrapper, 'challenge-item');
   expect(challengeListItemsNode.length).toBe(defaultState.challenges.length)
 });
+
+test('covers with an overlay when all challenges completed', () => {
+  let challengesAllSuccessful = defaultState.challenges.map(challenge => {
+    challenge.success = true;
+    return challenge;
+  });
+  const wrapper = setup(challengesAllSuccessful);
+  const badgeOverlay = findByTestAttr(wrapper, 'badge-overlay');
+  const challengeListItemsNode = findByTestAttr(wrapper, 'challenge-item');
+  expect(challengeListItemsNode.length).toBe(challengesAllSuccessful.length);
+  expect(badgeOverlay.hasClass('all-complete')).toBe(true);
+} )
